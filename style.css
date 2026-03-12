@@ -1,17 +1,19 @@
-:root {
-  --bg: #07111d;
-  --bg-soft: #0d1b2d;
-  --panel: #0f2138;
-  --panel-2: #132945;
-  --text: #f4f7fb;
-  --text-soft: #b9c7d8;
-  --line: rgba(125, 177, 194, 0.18);
-  --brand-blue: #132b4f;
-  --brand-teal: #67aabd;
-  --brand-light: #d9dde2;
+ :root {
+  --bg: #d9dde2;        /* grey from logo */
+  --bg-soft: #eef1f4;
+  --panel: #ffffff;
+  --text: #1b2c44;      /* dark navy */
+  --text-soft: #51627c;
+
+  --brand-blue: #1b2c44;
+  --brand-lightblue: #67aabd;  /* light blue from logo */
+
+  --line: rgba(27, 44, 68, 0.15);
+
   --white: #ffffff;
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
-  --radius: 20px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  --radius: 16px;
   --max: 1180px;
 }
 
@@ -26,9 +28,7 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(103, 170, 189, 0.12), transparent 28%),
-    linear-gradient(180deg, #050b14 0%, #07111d 100%);
+  background: var(--bg);
   color: var(--text);
 }
 
@@ -48,12 +48,8 @@ a {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  backdrop-filter: blur(14px);
-  background: rgba(5, 11, 20, 0.78);
-  border-bottom: 1px solid rgba(103, 170, 189, 0.12);
+  background: white;
+  border-bottom: 1px solid var(--line);
 }
 
 .nav-wrap {
@@ -65,7 +61,7 @@ a {
 }
 
 .brand-logo {
-  height: 52px;
+  height: 80px;
   width: auto;
 }
 
@@ -90,9 +86,13 @@ a {
 }
 
 .hero {
-  padding: 72px 0 56px;
+  padding: 80px 0;
+  background: linear-gradient(
+    180deg,
+    var(--bg) 0%,
+    var(--bg-soft) 100%
+  );
 }
-
 .hero-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -144,12 +144,10 @@ a {
 .btn:hover {
   transform: translateY(-1px);
 }
-
 .btn-primary {
-  background: var(--brand-teal);
-  color: #08121d;
+  background: var(--brand-lightblue);
+  color: white;
 }
-
 .btn-secondary {
   border: 1px solid rgba(217, 221, 226, 0.28);
   color: var(--text);
@@ -262,7 +260,7 @@ a {
 .service-card {
   padding: 28px;
   border-radius: var(--radius);
-  background: rgba(15, 33, 56, 0.82);
+  background: white;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
 }
