@@ -1,0 +1,38 @@
+body{
+font-family:Arial;
+margin:0;
+background:#f4f6f9;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+padding:20px;
+background:#0f172a;
+color:white;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+
+.portal-btn{
+background:#2563eb;
+padding:10px 16px;
+border-radius:6px;
+}
+
+.hero{
+text-align:center;
+padding:100px 20px;
+}
+
+.cta{
+background:#2563eb;
+color:white;
+padding:12px 20px;
+text-decoration:none;
+border-radius:8px;
+}
