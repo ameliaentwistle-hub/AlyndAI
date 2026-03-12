@@ -15,6 +15,106 @@
 
   --radius: 16px;
   --max: 1180px;
+  .bg-network {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.28;
+}
+
+.node,
+.link {
+  position: absolute;
+  display: block;
+}
+
+.node {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--brand-lightblue);
+  filter: blur(0.2px);
+  animation: floatNode 9s ease-in-out infinite;
+}
+
+.node::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.link {
+  height: 16px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(103, 170, 189, 0.75),
+    rgba(103, 170, 189, 0.45)
+  );
+  transform-origin: left center;
+  animation: pulseLink 6s ease-in-out infinite;
+}
+
+.n1 {
+  top: 120px;
+  right: 18%;
+  animation-delay: 0s;
+}
+
+.n2 {
+  top: 220px;
+  right: 31%;
+  width: 74px;
+  height: 74px;
+  animation-delay: 1.3s;
+}
+
+.n3 {
+  top: 360px;
+  right: 22%;
+  animation-delay: 2.1s;
+}
+
+.n4 {
+  top: 470px;
+  right: 34%;
+  width: 76px;
+  height: 76px;
+  animation-delay: 0.8s;
+}
+
+.n5 {
+  top: 640px;
+  left: 12%;
+  width: 64px;
+  height: 64px;
+  animation-delay: 1.8s;
+}
+
+.l1 {
+  top: 165px;
+  right: 22.8%;
+  width: 140px;
+  transform: rotate(30deg);
+}
+
+.l2 {
+  top: 287px;
+  right: 24.7%;
+  width: 168px;
+  transform: rotate(-28deg);
+}
+
+.l3 {
+  top: 421px;
+  right: 28.8%;
+  width: 132px;
+  transform: rotate(27deg);
+}
 }
 
 * {
@@ -89,8 +189,8 @@ a {
   padding: 80px 0;
   background: linear-gradient(
     180deg,
-    var(--bg) 0%,
-    var(--bg-soft) 100%
+    rgba(217, 221, 226, 0.92) 0%,
+    rgba(238, 241, 244, 0.96) 100%
   );
 }
 .hero-grid {
@@ -365,6 +465,22 @@ a {
   .about-box,
   .contact-box {
     grid-template-columns: 1fr;
+   @media (max-width: 760px) {
+  .bg-network {
+    opacity: 0.16;
+  }
+
+  .n1,
+  .n2,
+  .n3,
+  .n4,
+  .n5,
+  .l1,
+  .l2,
+  .l3 {
+    transform: scale(0.7);
+  }
+}
   }
 
   .hero-copy h1 {
@@ -381,9 +497,12 @@ a {
     width: min(var(--max), calc(100% - 32px));
   }
 
-  .site-header {
-    position: static;
-  }
+
+   .site-header,
+main {
+  position: relative;
+  z-index: 1;
+}
 
   .nav-wrap {
     flex-direction: column;
@@ -413,4 +532,35 @@ a {
   .contact-box h2 {
     font-size: 28px;
   }
+ @keyframes floatNode {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  25% {
+    transform: translateY(-10px) translateX(4px) scale(1.02);
+  }
+  50% {
+    transform: translateY(8px) translateX(-6px) scale(0.98);
+  }
+  75% {
+    transform: translateY(-6px) translateX(3px) scale(1.01);
+  }
+}
+
+@keyframes pulseLink {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+ .service-card,
+.about-box,
+.contact-box,
+.panel-card,
+.approach-step {
+  backdrop-filter: blur(10px);
 }
