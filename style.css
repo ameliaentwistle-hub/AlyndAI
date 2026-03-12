@@ -4,15 +4,15 @@
   --panel: rgba(255, 255, 255, 0.72);
   --panel-strong: rgba(255, 255, 255, 0.9);
   --text: #1b2c44;
-  --text-soft: #5d6d83;
+  --text-soft: #5f7085;
   --accent: #67aabd;
   --accent-dark: #4f96aa;
+  --white: #ffffff;
   --line: rgba(27, 44, 68, 0.1);
   --shadow: 0 18px 50px rgba(27, 44, 68, 0.08);
-  --shadow-soft: 0 10px 30px rgba(27, 44, 68, 0.06);
-  --radius: 22px;
+  --shadow-soft: 0 10px 28px rgba(27, 44, 68, 0.06);
+  --radius: 24px;
   --max: 1180px;
-  --nav-height: 88px;
 }
 
 * {
@@ -29,7 +29,7 @@ body {
   color: var(--text);
   background:
     radial-gradient(circle at top right, rgba(103, 170, 189, 0.16), transparent 24%),
-    radial-gradient(circle at bottom left, rgba(103, 170, 189, 0.1), transparent 26%),
+    radial-gradient(circle at bottom left, rgba(103, 170, 189, 0.12), transparent 24%),
     linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
   overflow-x: hidden;
 }
@@ -55,14 +55,14 @@ main {
   margin: 0 auto;
 }
 
-/* Background animation */
+/* Background */
 .bg-network {
   position: fixed;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.18;
+  opacity: 0.16;
 }
 
 .node,
@@ -77,8 +77,8 @@ main {
   height: 84px;
   border-radius: 50%;
   background: rgba(103, 170, 189, 0.85);
-  animation: floatNode 10s ease-in-out infinite;
   box-shadow: 0 0 30px rgba(103, 170, 189, 0.2);
+  animation: floatNode 10s ease-in-out infinite;
 }
 
 .node::after {
@@ -101,7 +101,7 @@ main {
   width: 380px;
   height: 380px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(103, 170, 189, 0.18), transparent 65%);
+  background: radial-gradient(circle, rgba(103, 170, 189, 0.16), transparent 65%);
   filter: blur(20px);
   animation: glowDrift 16s ease-in-out infinite;
 }
@@ -119,15 +119,16 @@ main {
 .g1 { top: -60px; right: -40px; }
 .g2 { bottom: 60px; left: -80px; animation-delay: 3s; }
 
+/* Header */
 .site-header {
-  padding: 22px 0 10px;
+  padding: 24px 0 10px;
 }
 
 .brand-wrap {
   display: flex;
   justify-content: center;
   margin-bottom: 18px;
-  animation: fadeUp 0.9s ease both;
+  animation: fadeUp 0.8s ease both;
 }
 
 .brand {
@@ -137,7 +138,7 @@ main {
 }
 
 .brand-logo {
-  width: min(260px, 70vw);
+  width: min(280px, 72vw);
   height: auto;
 }
 
@@ -147,14 +148,14 @@ main {
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  animation: fadeUp 1.05s ease both;
+  animation: fadeUp 1s ease both;
 }
 
 .site-nav a {
   padding: 12px 18px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.52);
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(255, 255, 255, 0.75);
   color: var(--text);
   font-size: 15px;
   font-weight: 600;
@@ -165,14 +166,14 @@ main {
 
 .site-nav a:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 14px 30px rgba(27, 44, 68, 0.1);
 }
 
 .site-nav .nav-cta,
 .site-nav .nav-service {
   background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-  color: white;
+  color: var(--white);
   border-color: transparent;
 }
 
@@ -181,21 +182,21 @@ main {
   background: linear-gradient(135deg, var(--accent-dark), var(--accent));
 }
 
+/* Hero */
 .hero {
-  padding: 44px 0 78px;
+  padding: 44px 0 82px;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  text-align: center;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
 }
 
 .hero-copy {
-  max-width: 860px;
-  margin: 0 auto;
-  animation: fadeUp 1.15s ease both;
+  max-width: 720px;
+  animation: fadeUp 1.1s ease both;
 }
 
 .eyebrow {
@@ -209,15 +210,15 @@ main {
 
 .hero-copy h1 {
   margin: 0;
-  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  font-size: clamp(2.7rem, 5vw, 5rem);
   line-height: 1.02;
-  font-weight: 700;
   letter-spacing: -0.03em;
+  font-weight: 700;
 }
 
 .hero-text {
-  max-width: 720px;
-  margin: 18px auto 0;
+  max-width: 640px;
+  margin: 18px 0 0;
   color: var(--text-soft);
   font-size: 18px;
   line-height: 1.7;
@@ -225,7 +226,6 @@ main {
 
 .hero-actions {
   display: flex;
-  justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
   margin-top: 28px;
@@ -239,8 +239,8 @@ main {
   padding: 0 24px;
   border-radius: 999px;
   font-weight: 700;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .btn:hover {
@@ -249,7 +249,7 @@ main {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-  color: white;
+  color: var(--white);
 }
 
 .btn-primary:hover {
@@ -264,7 +264,6 @@ main {
 
 .hero-points {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 22px;
@@ -278,24 +277,23 @@ main {
   color: var(--text-soft);
   font-size: 14px;
   box-shadow: var(--shadow-soft);
-  animation: fadeUp 1.3s ease both;
 }
 
 .hero-panel {
   display: flex;
   justify-content: center;
-  animation: fadeUp 1.3s ease both;
+  animation: fadeUp 1.25s ease both;
 }
 
 .panel-card {
-  width: min(100%, 780px);
+  width: 100%;
+  max-width: 500px;
   padding: 28px;
   border-radius: 28px;
   background: var(--panel);
   border: 1px solid rgba(255, 255, 255, 0.74);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
-  text-align: left;
   position: relative;
   overflow: hidden;
 }
@@ -311,7 +309,6 @@ main {
 .panel-card h2 {
   margin: 0 0 18px;
   font-size: 28px;
-  text-align: center;
 }
 
 .focus-item {
@@ -349,14 +346,16 @@ main {
   font-size: 15px;
 }
 
+/* Sections */
 .section {
-  padding: 76px 0;
+  padding: 78px 0;
 }
 
 .section-heading {
   max-width: 740px;
   margin: 0 auto 30px;
   text-align: center;
+  animation: fadeUp 0.9s ease both;
 }
 
 .section-heading h2 {
@@ -380,26 +379,31 @@ main {
 }
 
 .service-card,
-.approach-step,
-.about-box,
-.contact-box {
+.approach-step {
+  padding: 28px;
+  border-radius: var(--radius);
   background: var(--panel);
   border: 1px solid rgba(255, 255, 255, 0.74);
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
-}
-
-.service-card,
-.approach-step {
-  padding: 28px;
-  border-radius: var(--radius);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: fadeUp 0.95s ease both;
 }
 
 .service-card:hover,
 .approach-step:hover {
   transform: translateY(-6px);
   box-shadow: 0 22px 50px rgba(27, 44, 68, 0.11);
+}
+
+.service-card:nth-child(2),
+.approach-step:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.service-card:nth-child(3),
+.approach-step:nth-child(3) {
+  animation-delay: 0.2s;
 }
 
 .service-card.featured {
@@ -441,7 +445,7 @@ main {
   margin-bottom: 16px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-  color: white;
+  color: var(--white);
   font-weight: 700;
   box-shadow: 0 10px 24px rgba(103, 170, 189, 0.22);
 }
@@ -453,6 +457,11 @@ main {
   gap: 28px;
   padding: 34px;
   border-radius: 28px;
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.74);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+  animation: fadeUp 1s ease both;
 }
 
 .about-box h2,
@@ -478,28 +487,7 @@ main {
   margin-top: 18px;
 }
 
-/* Reveal animation */
-.hero-copy,
-.hero-panel,
-.section-heading,
-.service-card,
-.approach-step,
-.about-box,
-.contact-box {
-  animation: fadeUp 0.9s ease both;
-}
-
-.service-card:nth-child(2),
-.approach-step:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-.service-card:nth-child(3),
-.approach-step:nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-/* Keyframes */
+/* Animations */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -544,7 +532,9 @@ main {
   }
 }
 
+/* Responsive */
 @media (max-width: 980px) {
+  .hero-grid,
   .service-grid,
   .approach-grid,
   .about-box,
@@ -552,13 +542,28 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .about-box,
-  .contact-box {
-    padding: 28px;
+  .hero-copy {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions,
+  .hero-points {
+    justify-content: center;
   }
 
   .section-heading h2 {
     font-size: 32px;
+  }
+
+  .about-box,
+  .contact-box {
+    padding: 28px;
   }
 }
 
@@ -585,7 +590,11 @@ main {
   }
 
   .hero {
-    padding: 36px 0 60px;
+    padding: 34px 0 60px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.2rem, 9vw, 3.3rem);
   }
 
   .hero-text {
