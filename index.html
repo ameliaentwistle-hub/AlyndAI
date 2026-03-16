@@ -1,123 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Alynd.ai</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+<title>alynd.ai</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body{
+font-family:Arial;
+background:#081018;
+color:#E6E6E6;
+margin:0;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 40px;
+border-bottom:1px solid #1F2937;
+}
+
+.brand{
+font-weight:bold;
+font-size:20px;
+}
+
+button{
+background:#5F9EA9;
+border:none;
+padding:12px 18px;
+border-radius:6px;
+cursor:pointer;
+color:white;
+}
+
+.hero{
+padding:120px 40px;
+text-align:center;
+}
+
+h1{
+font-size:48px;
+}
+
+p{
+color:#9CA3AF;
+max-width:700px;
+margin:auto;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:60px 40px;
+}
+
+.card{
+background:#111821;
+padding:30px;
+border-radius:10px;
+}
+
+</style>
 </head>
+
 <body>
 
-  <main class="landing-page">
+<nav>
+<div class="brand">alynd.ai</div>
+<button>Request Demo</button>
+</nav>
 
-    <section class="portal-hero">
+<section class="hero">
 
-      <div class="hero-shell">
+<h1>
+Connect Operational Data.  
+Drive Continuous Improvement.
+</h1>
 
-        <!-- Top right logo -->
-        <div class="top-brand">
-          <img src="alynd-logolight.png" alt="Alynd.ai logo" />
-        </div>
+<p>
+alynd.ai helps organisations monitor operational performance,
+manage improvements and scale operational excellence across teams.
+</p>
 
-        <!-- Main heading -->
-        <div class="hero-heading">
-          <p class="hero-kicker">WELCOME TO <span>ALYND.AI</span></p>
-          <h1>HOME OF OPERATIONAL EXCELLENCE</h1>
-        </div>
+</section>
 
-        <!-- Main content row -->
-        <div class="hero-content">
+<section class="features">
 
-          <aside class="hero-side hero-side-left">
-            <p>
-              YOUR KEY TO<br>
-              UNLOCKING<br>
-              NETWORK<br>
-              STANDARDISATION<br>
-              AND COMMENCING<br>
-              YOUR JOURNEY TO<br>
-              OPERATIONAL<br>
-              EXCELLENCE
-            </p>
-          </aside>
+<div class="card">
+<h3>Operational Dashboards</h3>
+<p>Track KPI performance across operations.</p>
+</div>
 
-          <div class="hero-visual">
-            <img src="hero-dashboard.png" alt="Operational excellence dashboard" />
-          </div>
+<div class="card">
+<h3>Continuous Improvement</h3>
+<p>Capture ideas and track initiatives.</p>
+</div>
 
-          <aside class="hero-side hero-side-right">
-            <p>
-              ALYND.AI'S<br>
-              INDUSTRY LEADING<br>
-              OPERATIONAL<br>
-              MANAGEMENT<br>
-              SYSTEM
-            </p>
-          </aside>
+<div class="card">
+<h3>Action Management</h3>
+<p>Assign ownership and track execution.</p>
+</div>
 
-        </div>
-
-        <!-- CTA buttons -->
-        <div class="hero-actions">
-          <a class="portal-btn"
-             href="https://apps.powerapps.com/play/e/default-ac181cde-94e0-4ff7-a25d-02adb3c36cb3/a/4ade81ef-739e-4e38-982e-0b516302c9b9?tenantId=ac181cde-94e0-4ff7-a25d-02adb3c36cb3&hint=b5ef38fb-f7dd-4b70-8561-2455b24d87b8&sourcetime=1773343093958"
-             target="_blank"
-             rel="noopener">
-            CLIENT PORTAL
-          </a>
-
-          <a class="portal-btn" href="#services">
-            SERVICES
-          </a>
-        </div>
-
-        <!-- Partner logos -->
-        <div class="hero-partners">
-          <div class="partner">
-            <span class="partner-label">DELIVERED BY</span>
-            <img src="scopt-logo.png" alt="SCOPT logo" />
-          </div>
-
-          <div class="partner">
-            <span class="partner-label">POWERED BY</span>
-            <img src="integrate-logo.png" alt="Integrate Warehouse Systems logo" />
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- Optional lower content -->
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Services</h2>
-          <p>
-            Practical transformation that improves operational performance and automation maturity.
-          </p>
-        </div>
-
-        <div class="service-grid">
-          <div class="service-card">
-            <h3>Operational Excellence</h3>
-            <p>Your Operational Management System for driving standardisation across your network.</p>
-          </div>
-
-          <div class="service-card featured">
-            <h3>Automation Modelling</h3>
-            <p>Evidence-based recommendations to support the start of your automation journey.</p>
-          </div>
-
-          <div class="service-card">
-            <h3>Transformation Delivery</h3>
-            <p>Support for operational and digital transformation programmes from strategy to implementation.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
+</section>
 
 </body>
 </html>
