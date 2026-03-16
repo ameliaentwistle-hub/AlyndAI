@@ -1,255 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Alynd.ai Customer Portal</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Alynd.ai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- animated background -->
-  <div class="bg-network" aria-hidden="true">
-    <span class="glow g1"></span>
-    <span class="glow g2"></span>
+  <main class="landing-page">
 
-    <span class="node n1"></span>
-    <span class="node n2"></span>
-    <span class="node n3"></span>
-    <span class="node n4"></span>
-    <span class="node n5"></span>
+    <section class="portal-hero">
 
-    <span class="link l1"></span>
-    <span class="link l2"></span>
-    <span class="link l3"></span>
-  </div>
+      <div class="hero-shell">
 
-  <header class="site-header">
-    <div class="container header-bar">
-      <div class="header-logo">
-        <img src="alynd-logolight.png" alt="Alynd.ai logo">
-      </div>
+        <!-- Top right logo -->
+        <div class="top-brand">
+          <img src="alynd-logolight.png" alt="Alynd.ai logo" />
+        </div>
 
-      <nav class="header-nav">
-        <a href="#portal">Portal</a>
-        <a href="#services">Solutions</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+        <!-- Main heading -->
+        <div class="hero-heading">
+          <p class="hero-kicker">WELCOME TO <span>ALYND.AI</span></p>
+          <h1>HOME OF OPERATIONAL EXCELLENCE</h1>
+        </div>
 
-  <main>
+        <!-- Main content row -->
+        <div class="hero-content">
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="container hero-minimal">
+          <aside class="hero-side hero-side-left">
+            <p>
+              YOUR KEY TO<br>
+              UNLOCKING<br>
+              NETWORK<br>
+              STANDARDISATION<br>
+              AND COMMENCING<br>
+              YOUR JOURNEY TO<br>
+              OPERATIONAL<br>
+              EXCELLENCE
+            </p>
+          </aside>
 
-        <p class="eyebrow">
-          CUSTOMER PORTAL
-        </p>
+          <div class="hero-visual">
+            <img src="hero-dashboard.png" alt="Operational excellence dashboard" />
+          </div>
 
-        <h1>
-          Welcome to the Alynd.ai Customer Portal
-        </h1>
+          <aside class="hero-side hero-side-right">
+            <p>
+              ALYND.AI'S<br>
+              INDUSTRY LEADING<br>
+              OPERATIONAL<br>
+              MANAGEMENT<br>
+              SYSTEM
+            </p>
+          </aside>
 
-        <p class="hero-text">
-          Access operational tools, automation services, and transformation support from one secure location.
-        </p>
+        </div>
 
-        <div class="hero-top-actions">
-          <a class="hero-pill primary"
+        <!-- CTA buttons -->
+        <div class="hero-actions">
+          <a class="portal-btn"
              href="https://apps.powerapps.com/play/e/default-ac181cde-94e0-4ff7-a25d-02adb3c36cb3/a/4ade81ef-739e-4e38-982e-0b516302c9b9?tenantId=ac181cde-94e0-4ff7-a25d-02adb3c36cb3&hint=b5ef38fb-f7dd-4b70-8561-2455b24d87b8&sourcetime=1773343093958"
              target="_blank"
              rel="noopener">
-            Open Client Portal
+            CLIENT PORTAL
           </a>
 
-          <a class="hero-pill" href="operational-excellence.html">
-            OMS
-          </a>
-
-          <a class="hero-pill" href="#services">
-            AMS
-          </a>
-
-          <a class="hero-pill" href="#contact">
-            Contact Us
+          <a class="portal-btn" href="#services">
+            SERVICES
           </a>
         </div>
-      </div>
-    </section>
 
-    <!-- PORTAL ACCESS -->
-    <section class="section alt-section" id="portal">
-      <div class="container">
-
-        <div class="section-heading">
-          <h2>Access Portal Services</h2>
-          <p>
-            Everything you need to manage operational excellence, automation planning, and customer support.
-          </p>
-        </div>
-
-        <div class="service-grid">
-
-          <div class="service-card">
-            <h3>OMS</h3>
-            <p>
-              Access your Operational Management System and standardisation framework.
-            </p>
-            <a class="text-link" href="operational-excellence.html">Open OMS</a>
+        <!-- Partner logos -->
+        <div class="hero-partners">
+          <div class="partner">
+            <span class="partner-label">DELIVERED BY</span>
+            <img src="scopt-logo.png" alt="SCOPT logo" />
           </div>
 
-          <div class="service-card featured">
-            <h3>Client Portal</h3>
-            <p>
-              Enter the main customer portal for tools, workflows, and managed access.
-            </p>
-            <a class="text-link"
-               href="https://apps.powerapps.com/play/e/default-ac181cde-94e0-4ff7-a25d-02adb3c36cb3/a/4ade81ef-739e-4e38-982e-0b516302c9b9?tenantId=ac181cde-94e0-4ff7-a25d-02adb3c36cb3&hint=b5ef38fb-f7dd-4b70-8561-2455b24d87b8&sourcetime=1773343093958"
-               target="_blank"
-               rel="noopener">
-              Launch Portal
-            </a>
+          <div class="partner">
+            <span class="partner-label">POWERED BY</span>
+            <img src="integrate-logo.png" alt="Integrate Warehouse Systems logo" />
           </div>
-
-          <div class="service-card">
-            <h3>AMS</h3>
-            <p>
-              Explore automation modelling services and evidence-based operational recommendations.
-            </p>
-            <a class="text-link" href="#services">View AMS</a>
-          </div>
-
         </div>
 
       </div>
+
     </section>
 
-    <!-- SOLUTIONS -->
+    <!-- Optional lower content -->
     <section class="section" id="services">
       <div class="container">
-
         <div class="section-heading">
-          <h2>Solutions</h2>
+          <h2>Services</h2>
           <p>
-            Practical support for operational improvement, automation maturity, and transformation delivery.
+            Practical transformation that improves operational performance and automation maturity.
           </p>
         </div>
 
         <div class="service-grid">
-
           <div class="service-card">
             <h3>Operational Excellence</h3>
-            <p>
-              Standardise processes across your network and build a scalable operating model.
-            </p>
-            <ul>
-              <li>Process improvement</li>
-              <li>Operating model design</li>
-              <li>Performance optimisation</li>
-            </ul>
+            <p>Your Operational Management System for driving standardisation across your network.</p>
           </div>
 
           <div class="service-card featured">
             <h3>Automation Modelling</h3>
-            <p>
-              Build a data-led path into automation with measurable recommendations.
-            </p>
-            <ul>
-              <li>Automation strategy</li>
-              <li>Capacity modelling</li>
-              <li>AI integration</li>
-            </ul>
+            <p>Evidence-based recommendations to support the start of your automation journey.</p>
           </div>
 
           <div class="service-card">
             <h3>Transformation Delivery</h3>
-            <p>
-              Deliver operational and digital transformation from strategy through implementation.
-            </p>
-            <ul>
-              <li>Standardisation</li>
-              <li>One best way</li>
-              <li>Operational change</li>
-            </ul>
+            <p>Support for operational and digital transformation programmes from strategy to implementation.</p>
           </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section alt-section" id="about">
-      <div class="container">
-        <div class="about-box">
-
-          <div>
-            <h2>About Alynd.ai</h2>
-          </div>
-
-          <div>
-            <p>
-              Alynd.ai helps organisations standardise operations, improve flow, and create the foundation for scalable growth and automation.
-            </p>
-
-            <p>
-              Our customer portal provides direct access to operational tools, services, and support in one place.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-box">
-
-          <div>
-            <h2>Need support?</h2>
-          </div>
-
-          <div>
-            <p>
-              Speak to the Alynd.ai team about operational improvement, automation modelling, or portal access.
-            </p>
-
-            <div class="contact-actions">
-              <a class="btn btn-primary" href="mailto:info@alynd.ai">
-                Email Us
-              </a>
-
-              <a class="btn btn-secondary"
-                 href="https://apps.powerapps.com/play/e/default-ac181cde-94e0-4ff7-a25d-02adb3c36cb3/a/4ade81ef-739e-4e38-982e-0b516302c9b9?tenantId=ac181cde-94e0-4ff7-a25d-02adb3c36cb3&hint=b5ef38fb-f7dd-4b70-8561-2455b24d87b8&sourcetime=1773343093958"
-                 target="_blank"
-                 rel="noopener">
-                Open Client Portal
-              </a>
-            </div>
-
-          </div>
-
         </div>
       </div>
     </section>
 
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-bar">
-      <p>© 2026 Alynd.ai. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#contact">Contact</a>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </div>
-    </div>
-  </footer>
 
 </body>
 </html>
